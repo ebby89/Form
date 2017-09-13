@@ -8,4 +8,17 @@ $(document).ready(function() {
 
     event.preventDefault();
   });
+
+
+  $("#formTwo").submit(function(event){
+    var yell = $("input#sentence").val().toUpperCase();
+    var whisp = $("input#whisper").val().toLowerCase();
+    var changing = $("input#changing").val();
+
+    $(".sentence").text(yell);
+    $(".whisper").text(whisp);
+    $(".changing").text(changing);
+
+    event.preventDefault();
+  });
 });
